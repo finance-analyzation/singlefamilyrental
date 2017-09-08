@@ -1,0 +1,356 @@
+<html>
+<title> Real Estate Calculator </title>
+	<link rel="stylesheet" type="text/css" href="style 8.css">
+<head>
+		<div class="top_banner"></div>
+
+		<div class= "bottom_banner"></div>
+<meta charset="UTF-8">
+<script>
+
+	
+
+	//------------Button Variables----------------//
+	
+	var i = 0;
+	
+	
+function computeRealestate(){
+	
+	//---------------DECLARATIONS----------------//
+	
+	var purchase_amount = document.getElementById('purchase_amount').value;
+	var down_payment_percentage = document.getElementById('down_payment_percentage').value;
+	var down_payment = (purchase_amount * down_payment_percentage / 100).toFixed(2);
+	var	interest_rate = document.getElementById('interest_rate').value;	
+	var closing_cost = document.getElementById('closing_cost').value;
+	var renovation_cost = document.getElementById('renovation_cost').value;	
+	var initial_investment = (down_payment_percentage / 100 * purchase_amount + +renovation_cost + +closing_cost).toFixed(2);
+
+	//-------------Mortgage Section---------------//
+		
+	var N;	//Number of months for the loan
+	
+	if (document.getElementById('month360').checked){
+		N = 360;
+	}
+	else if (document.getElementById('month180').checked){
+		N = 180;
+	}
+			
+	var P = (+purchase_amount - +down_payment); //principal on loan
+	var I = (+interest_rate / 1200); //interest on the loan, 100% and 12 months = 1200
+		
+		var mortgage = (P * I * (Math.pow(1 + I, N)) / (Math.pow(1 + I, N) - 1)).toFixed(2); //monthly total mortgage payment amount
+		
+	if(isNaN(mortgage))	{
+	
+		mortgage = 0;
+	}
+		
+//----------------PMI Statement-----------------//
+	
+	var pmi = ((P * 0.0075) / 12).toFixed(2); //private mortgage insurance
+	var nothing = 0;
+	var output;
+	
+	if (down_payment_percentage < 20){
+			output = pmi + " Estimated Average";
+	}else { 
+			output = nothing + "- No PMI Needed";
+			pmi = 0;
+	}
+	
+	document.getElementById('mort_ins').innerHTML = "PMI = $"+output;
+
+		
+	//-----------Second Row Variables----------------//		
+	
+		var rent = document.getElementById('rent').value;
+		var taxes = document.getElementById('taxes').value;
+		var insurance = document.getElementById('insurance').value;
+		
+		var repair = (+rent * 0.08).toFixed(2);
+		var vacancy = (+rent * 0.05).toFixed(2);
+		var capex = (+rent * 0.10).toFixed(2);
+		var total_revenue = (+rent).toFixed(2);
+		var total_expenses = (+mortgage + +pmi + +taxes + +insurance + +repair + +vacancy + +capex).toFixed(2);
+		
+		var monthly_cash_flow = (+total_revenue - +total_expenses).toFixed(2);		
+		var yearly_cash_flow = (+monthly_cash_flow * 12).toFixed(2);
+		var cash_on_cash = (((+monthly_cash_flow * 12) / (initial_investment)) * (100)).toFixed(2);
+		
+			if(isNaN(cash_on_cash)){
+		
+				cash_on_cash = (0).toFixed(2);
+		}
+		
+	//--------Amorization yearly Paydown----------//
+			
+		var current_principal;
+		current_principal = P;
+		var equity;
+		
+		for (var l = 1; l <= 12 ; l++){ // l = # of months up to one year
+		
+			var current_principal = current_principal * (1 + I)- +mortgage; // what is left on the loan
+		}
+		
+		var equity = (P - current_principal); // starting loan amount - the 12 payments
+		var total_roi = (((+equity + +yearly_cash_flow) / +initial_investment) *100).toFixed(2);
+		
+			if(isNaN(total_roi)){
+	
+				total_roi = (0).toFixed(2);
+	}
+			
+	//-------------------Output Top Left------------------//
+
+		down_payment = down_payment.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		document.getElementById('down_payment').innerHTML = "Down Payment = $"+down_payment;
+		
+		initial_investment = initial_investment.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		document.getElementById('initial_investment').innerHTML = "Initial Investment = $"+initial_investment;
+	
+	
+	//-------------------Output Top Middle------------------//
+		
+		mortgage = mortgage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		document.getElementById('mortgage').innerHTML = "Mortgage = $"+mortgage;
+		
+		repair = repair.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		document.getElementById('repair').innerHTML = "Repair = $"+repair;
+		
+		vacancy = vacancy.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		document.getElementById('vacancy').innerHTML = "Vacancy = $"+vacancy;
+		
+		capex = capex.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		document.getElementById('capex').innerHTML = "Capex = $"+capex;
+		
+		total_revenue = total_revenue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		document.getElementById('total_revenue').innerHTML = "Total Revenue = $"+total_revenue;
+		
+		total_expenses = total_expenses.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		document.getElementById('total_expenses').innerHTML = "Total Expenses = $"+total_expenses;
+	
+	//-------------------Output Top Right------------------//
+
+		monthly_cash_flow = monthly_cash_flow.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		document.getElementById('monthly_cash_flow').innerHTML = "Monthly Cash Flow = $"+monthly_cash_flow;
+			
+		yearly_cash_flow = yearly_cash_flow.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		document.getElementById('yearly_cash_flow').innerHTML = "Yearly Cash Flow = $"+yearly_cash_flow;
+			
+		cash_on_cash = cash_on_cash.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		document.getElementById('cash_on_cash').innerHTML = "Cash On Cash = "+cash_on_cash + "%";
+		
+		total_roi = total_roi.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		document.getElementById('total_roi').innerHTML = "Total ROI = "+total_roi + "%"; 	
+	
+	
+	//------------Bottom If Statement-----------//
+	
+	if (i == 1){
+		document.getElementById('save1II').innerHTML = "Initial Investment = $"+initial_investment;
+		document.getElementById('save1MC').innerHTML = "Monthly Cash Flow = $"+monthly_cash_flow;
+		document.getElementById('save1CC').innerHTML = "Cash On Cash = "+cash_on_cash + "%";
+		i = 0;
+		}
+		
+	if (i == 2){
+		document.getElementById('save2II').innerHTML = "Initial Investment = $"+initial_investment;
+		document.getElementById('save2MC').innerHTML = "Monthly Cash Flow = $"+monthly_cash_flow;
+		document.getElementById('save2CC').innerHTML = "Cash On Cash = "+cash_on_cash + "%";
+		i = 0;
+		}
+		
+	if (i == 3){
+		document.getElementById('save3II').innerHTML = "Initial Investment = $"+initial_investment;
+		document.getElementById('save3MC').innerHTML = "Monthly Cash Flow = $"+monthly_cash_flow;
+		document.getElementById('save3CC').innerHTML = "Cash On Cash = "+cash_on_cash + "%";
+		i = 0;
+		}		
+
+	//-----------Clear If Statement-----------//	
+		
+	if (i == 4){
+		document.getElementById("myForm").reset();
+		i = 0;	
+		}
+	
+}
+
+	//-------------Button Fuctions--------------//
+	
+	function save1(){
+	i = 1;
+	computeRealestate(i);
+}
+	
+	function save2(){
+	i = 2;
+	computeRealestate(i);
+}
+
+	function save3(){
+	i = 3;
+	computeRealestate(i);
+}
+	
+	//-----------Clear Funtion------------//
+	
+	function clear1(){
+	i = 4;
+	computeRealestate(i);
+}
+
+
+</script>
+</head>
+<body onload= computeRealestate()>
+
+<form id= "myForm">
+
+	
+	<!-------------Left Top Data Rows-------------->
+	
+	<div class= "title_banner">
+		<div class="left_banner">
+			<p><strong>Upfront Cost</strong></p>
+		</div>
+	</div>
+		
+	<div class="left">
+		<p>Purchase Amount: $<input id="purchase_amount" type="number" min="1" max="1000000" onchange="computeRealestate()"></p>
+		<p>Down Payment Percentage: <input id="down_payment_percentage" type="number" min="0" max="100" onchange="computeRealestate()">%</p>
+			<h4 id="down_payment"></h4>
+	
+	<!--------------Length of Mortgage----------------->
+	
+		<input type="radio" name="years" id= "month180" onchange= "computeRealestate()"> 15 Year &#160;&#160;&#160;&#160;
+		<input type="radio" name="years" id= "month360" onchange= "computeRealestate()"> 30 Year 
+	
+	<!-----------Left Top Data Rows Continued------------>
+	
+		<p>Interest Rate: <input id="interest_rate" type="number" min=".01" max="100" onchange="computeRealestate()">%</p>
+		<p>Closing Costs: $<input id="closing_cost" type="number" min="1" max="1000000" onchange="computeRealestate()"></p>
+		<p>Renovation Costs: $<input id="renovation_cost" type="number" min="1" max="1000000" onchange="computeRealestate()"></p>
+			<h4 id="initial_investment"></h4>
+		<p><br /></p>
+	</div>
+	
+	<!-----------Middle Top Data Rows------------->
+	
+	<div class= "title_banner">
+		<div class="middle_banner">
+			<p><strong>Monthly Revenue & Expenses</strong></p>
+		</div>	
+	</div>
+	
+	<div class="all_middle">
+		<div class="middle">	
+			<p>Rent: $<input id="rent" type="number" min="1" max="1000000" onchange="computeRealestate()"></p>
+				<div class="line"> </div>
+			
+				<h4 id="mort_ins"></h4>
+				<h4 id="mortgage"></h4>
+			<p>Taxes: $<input id="taxes" type="number" min="1" max="1000000" onchange="computeRealestate()"></p>
+			<p>Insurance: $<input id="insurance" type="number" min="1" max="1000000" onchange="computeRealestate()"></p>
+				<h4 id="repair"></h4>
+				<h4 id="vacancy"></h4>
+				<h4 id="capex"></h4>
+				<h4 id="total_revenue"></h4>
+				<h4 id="total_expenses"></h4>
+		</div>
+	</div>	
+</form>
+		
+	<!-----------Right Top Data Rows------------->	
+	
+		<div class= "title_banner">
+			<div class="right_banner">
+				<p><strong>Return On Investment</strong></p>
+			</div>
+		</div>	
+			
+			<div class="right">	
+				<h4 id="monthly_cash_flow"></h4>
+				<h4 id="yearly_cash_flow"></h4>
+				<h4 id="cash_on_cash"></h4>
+				<h4 id="total_roi"></h4>
+				
+			</div>
+	
+	<!-----------Bottom Rows of Data------------->	
+		
+		<button onclick= "save1()" class= "button1" type="button1" ><strong> Option 1</strong></button>
+			<div class="house1">
+				<h3 id="save1II"></h3>
+				<h3 id="save1MC"></h3>
+				<h3 id="save1CC"></h3>
+			</div>
+	
+		<button onclick= "save2()" class= "button2" type="button2" ><strong> Option 2</strong></button>	
+			<div class="house2">
+				<h3 id="save2II"></h3>
+				<h3 id="save2MC"></h3>
+				<h3 id="save2CC"></h3>
+			</div>
+		
+		<button onclick= "save3()" class= "button3" type="button3" ><strong> Option 3</strong></button>
+			<div class="house3">
+				<h3 id="save3II"></h3>
+				<h3 id="save3MC"></h3>
+				<h3 id="save3CC"></h3>
+			</div>
+
+	<!-----------Clear Button-------------->		
+	
+	<div>
+	<button onclick= "clear1()" class= "clear_houses" value= "Reset form" ><strong>Clear Above Fields</strong></button>
+	</div>	
+			
+	<!-----------Middle Help Questions---------------->
+			
+	<div class= "help_pmi">
+		<span> Private Mortgage Insurance: Required When Down Payment is less than 20% </span>
+		<img src= "question.PNG" alt= "questionMark" /> 
+	</div>
+	
+		<div class= "help_repair">
+			<span> 8% of Rent for Maintenance </span>
+			<img src= "question.PNG" alt= "questionMark" /> 
+		</div>
+		
+			<div class= "help_vacancy">
+				<span> 5% of Rent </span>
+				<img src= "question.PNG" alt= "questionMark" /> 
+			</div>
+			
+				<div class= "help_capex">
+					<span> 10% of Rent for Major Expenses </span>
+					<img src= "question.PNG" alt= "questionMark" /> 
+				</div>	
+			
+	<!--------Right Help Questions---------------->
+	
+	<div class= "help_cash">
+		<span> ROI on Yearly Cash Flow </span>
+		<img src= "question.PNG" alt= "questionMark" /> 
+	</div>
+			
+		<div class= "help_roi">
+			<span> Total ROI: Yearly Cashflow + Mortgage Paydown </span>
+			<img src= "question.PNG" alt= "questionMark" /> 
+		</div>	
+
+	<!---------Contributions---------->
+	
+	<div class= "builders">
+		<h5> <a href="https://www.linkedin.com/in/swanson-joshua/"> Joshua Swanson </a> - Product Controller &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+			 <a href="https://www.linkedin.com/in/nathan-lovero-740099a0/"> Nathan Lovero </a>- Project Manager &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+			 <a href="https://www.facebook.com/altpainting/"> Caitie Kern </a> - Artist </h5>
+	</div>	
+			
+</body>
+</html>
