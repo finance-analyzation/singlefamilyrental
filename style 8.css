@@ -158,7 +158,7 @@ body,html {
 	/*----------Middle Help Questions--------------*/
 
 .help_pmi {
-	icon: ("question.png");
+	icon: ("question.jpg");
 	position:absolute;
 	left: 32%;
 	top: 174px;
@@ -179,7 +179,7 @@ body,html {
 }	
 	
 .help_repair {
-	icon: ("question.png");
+	icon: ("question.jpg");
 	position:absolute;
 	left: 32%;
 	top: 334px;
@@ -200,7 +200,7 @@ body,html {
 }
 	
 .help_vacancy {
-	icon: ("question.png");
+	icon: ("question.jpg");
 	position:absolute;
 	left: 32%;
 	top: 372px;
@@ -221,7 +221,7 @@ body,html {
 }	
 
 .help_capex {
-	icon: ("question.png");
+	icon: ("question.jpg");
 	position:absolute;
 	left: 32%;
 	top: 413px;
@@ -243,7 +243,7 @@ body,html {
 	/*------Rigt Help Questions--------------*/
 	
 .help_cash {
-	icon: ("question.png");
+	icon: ("question.jpg");
 	position:absolute;
 	left: 66%;
 	top: 200px;
@@ -264,7 +264,7 @@ body,html {
 }
 
 .help_roi {
-	icon: ("question.png");
+	icon: ("question.jpg");
 	position:absolute;
 	left: 66%;
 	top: 240px;
