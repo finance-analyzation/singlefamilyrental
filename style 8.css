@@ -1,0 +1,311 @@
+/*--------General Background--------*/
+
+body,html {
+	
+	margin:0;
+	padding:0;
+	background-image: url("bluehouse.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+}
+.top_banner{
+	position:relative;
+	top: 0px;
+	width: 100%;
+	height: 80px;
+	opacity: 0.3; /*transparent setting*/
+	background-color: black; 
+}
+
+.title_banner{
+	position:absolute;
+	font-size: 27px;
+	font-family: Arial;
+	top: -5px;
+	display: inline;
+	height: 50px;
+	white-space: nowrap;
+}
+
+.all_middle{
+	font-family: Arial;
+}
+
+
+/*------------Left Top Column-------------*/
+
+.left_banner{
+	padding-right: 10px;
+	position: absolute;
+	font-size: 27px;
+	top: -5px;
+	left: 2.5em;
+	
+}
+
+.left {
+	position: absolute;
+	padding-left: 2.5em;
+	top: 100px;
+	font-family: Arial;
+}
+
+/*------------Middle Top Column-------------*/
+
+.middle_banner {
+	position: absolute;
+	font-size: 27px;
+	font-family: Arial;
+	left: 17em;
+	top: -5px;
+	
+}
+
+.middle {
+	position: absolute;
+	left: 33%;
+	top: 100px;
+	font-family: Arial;
+}
+
+.line {
+	border-top: 1px solid;
+	color: black;
+}
+
+/*------------Right Top Column-------------*/
+
+.right_banner {
+	position: absolute;
+	font-size: 27px;
+	font-family: Arial;
+	left: 38em;
+	top: -5px;
+	
+}
+
+.right {
+	position: absolute;
+	left: 67%;
+	top: 100px;		
+	font-family: Arial;
+}
+
+/*------------Bottom Data-----------*/
+	
+.button1 {
+	position: absolute;
+	font-size: 15px;
+	font-family: Arial;
+	background-color: #c3c1cc;
+	color: green;
+	top: 70%;
+	left: 10%;
+}	
+.house1 {
+	position:absolute;
+	Top: 74%;
+	Left: 6%;
+	font-family: Arial;
+}		
+	
+.button2 {
+	position: absolute;
+	font-size: 15px;
+	font-family: Arial;
+	background-color: #c3c1cc;
+	color: green;
+	top: 70%;
+	left: 30%;
+}	
+	
+.house2 {
+	position:absolute;
+	Top: 74%;
+	Left: 26%;
+	font-family: Arial;
+}		
+	
+.button3 {
+	position: absolute;
+	font-size: 15px;
+	font-family: Arial;
+	background-color: #c3c1cc;
+	color: green;
+	top: 70%;
+	left: 50%;
+}	
+	
+.house3 {
+	position:absolute;
+	Top: 74%;
+	Left: 46%;
+	font-family: Arial;
+}		
+	
+.clear_houses {
+	position: absolute;
+	font-size: 18px;
+	font-family: Arial;
+	background-color: #d1d0d8;
+	color: red;
+	top: 60%;
+	left: 8%;
+}	
+
+	/*----------Middle Help Questions--------------*/
+
+.help_pmi {
+	icon: ("question.png");
+	position:absolute;
+	left: 32%;
+	top: 174px;
+}
+.help_pmi span{ display:none;}	
+.help_pmi:hover	span{
+	display: inline;
+	position: absolute;
+	font-family: Arial;
+	width:450px;
+	padding:5px;
+	color: white;
+	background: black;
+	font-size: 13px;
+	border-radius: 6px;
+	top: 17px;
+	left: -100px
+}	
+	
+.help_repair {
+	icon: ("question.png");
+	position:absolute;
+	left: 32%;
+	top: 334px;
+}
+.help_repair span{ display:none;}	
+.help_repair:hover	span{
+	display: block;
+	position: absolute;
+	font-family: Arial;
+	width:165px;
+	padding:5px;
+	color: white;
+	background: black;
+	font-size: 13px;
+	border-radius: 6px;
+	top: -5px;
+	left: -180px
+}
+	
+.help_vacancy {
+	icon: ("question.png");
+	position:absolute;
+	left: 32%;
+	top: 372px;
+}
+.help_vacancy span{ display:none;}	
+.help_vacancy:hover	span{
+	display: block;
+	position: absolute;
+	font-family: Arial;
+	width:70px;
+	padding:5px;
+	color: white;
+	background: black;
+	font-size: 13px;
+	border-radius: 6px;
+	top: -5px;
+	left: -85px
+}	
+
+.help_capex {
+	icon: ("question.png");
+	position:absolute;
+	left: 32%;
+	top: 413px;
+}
+.help_capex span{ display:none;}	
+.help_capex:hover	span{
+	display: block;
+	position: absolute;
+	font-family: Arial;
+	width:190px;
+	padding:5px;
+	color: white;
+	background: black;
+	font-size: 13px;
+	border-radius: 6px;
+	top: -5px;
+	left: -207px
+}	
+	/*------Rigt Help Questions--------------*/
+	
+.help_cash {
+	icon: ("question.png");
+	position:absolute;
+	left: 66%;
+	top: 200px;
+}
+.help_cash span{ display:none;}	
+.help_cash:hover	span{
+	display: block;
+	position: absolute;
+	font-family: Arial;
+	width:150px;
+	padding:5px;
+	color: white;
+	background: black;
+	font-size: 13px;
+	border-radius: 6px;
+	top: -5px;
+	left: -165px
+}
+
+.help_roi {
+	icon: ("question.png");
+	position:absolute;
+	left: 66%;
+	top: 240px;
+}
+.help_roi span{ display:none;}	
+.help_roi:hover	span{
+	display: block;
+	position: absolute;	
+	font-family: Arial;
+	width:285px;
+	padding:5px;
+	color: white;
+	background: black;
+	font-size: 13px;
+	border-radius: 6px;
+	top: -5px;
+	left: -300px
+}
+
+.builders{
+	position:absolute;
+	color: white;
+	font-family: Arial;
+	bottom: 5px;
+	display:incline;
+	padding-left: 20px;
+}
+a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+	
+a:hover {
+	color: red;
+}
+
+.bottom_banner{
+	position: fixed;
+	bottom:0px;
+	width:100%;
+	height: 65px;
+	opacity:0.7;
+	background-color: black;
+}
