@@ -287,11 +287,11 @@ body,html {
 .backbutton{
 	position:absolute;
 	font-size: 15px;
-	bottom:15px;
+	bottom:20px;
 	font-family: Arial;
 	background-color: #c3c1cc;
 	color: black;
-	left: 20px;	
+	left: 5px;	
 }
 
 .builders{
