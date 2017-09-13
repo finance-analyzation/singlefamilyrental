@@ -287,11 +287,11 @@ body,html {
 .backbutton{
 	position:absolute;
 	font-size: 15px;
-	bottom:10px;
+	bottom:15px;
 	font-family: Arial;
 	background-color: #c3c1cc;
 	color: black;
-	left: 2em;	
+	left: 20px;	
 }
 
 .builders{
@@ -301,6 +301,7 @@ body,html {
 	bottom: 5px;
 	display:incline;
 	left: 15em;
+	white-space:nowrap;
 }
 a {
 	text-decoration: none;
