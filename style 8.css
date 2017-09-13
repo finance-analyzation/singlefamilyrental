@@ -291,7 +291,7 @@ body,html {
 	font-family: Arial;
 	background-color: #c3c1cc;
 	color: black;
-	left: 5px;	
+	left: 1px;	
 }
 
 .builders{
@@ -300,12 +300,13 @@ body,html {
 	font-family: Arial;
 	bottom: 5px;
 	display:incline;
-	left: 15em;
+	left: 10em;
 	white-space:nowrap;
 }
 a {
 	text-decoration: none;
 	color: #FFFFFF;
+	padding-left:5em;
 }
 	
 a:hover {
