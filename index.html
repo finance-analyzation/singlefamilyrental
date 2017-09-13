@@ -8,8 +8,6 @@
 <meta charset="UTF-8">
 <script>
 
-	
-
 	//------------Button Variables----------------//
 	
 	var i = 0;
@@ -22,7 +20,7 @@ function computeRealestate(){
 	var purchase_amount = document.getElementById('purchase_amount').value;
 	var down_payment_percentage = document.getElementById('down_payment_percentage').value;
 	var down_payment = (purchase_amount * down_payment_percentage / 100).toFixed(2);
-	var	interest_rate = document.getElementById('interest_rate').value;	
+	var interest_rate = document.getElementById('interest_rate').value;	
 	var closing_cost = document.getElementById('closing_cost').value;
 	var renovation_cost = document.getElementById('renovation_cost').value;	
 	var initial_investment = (down_payment_percentage / 100 * purchase_amount + +renovation_cost + +closing_cost).toFixed(2);
@@ -349,7 +347,9 @@ function computeRealestate(){
 	<div class= "builders">
 		
 		<form action= "https://finance-analyzation.github.io/homepage/">
+			<div class= "backbutton">
 			<button>Home Page</button>
+			</div>
 		</form>
 		
 		<h5><a href="https://www.linkedin.com/in/nathan-lovero-740099a0/"> Nathan Lovero </a>- Project Manager &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
