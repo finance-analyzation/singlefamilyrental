@@ -11,7 +11,7 @@ body,html {
 	height: 100%;
 }
 .top_banner{
-	position:relative;
+	position:absolute;
 	top: 0px;
 	width: 100%;
 	height: 80px;
@@ -306,7 +306,7 @@ body,html {
 a {
 	text-decoration: none;
 	color: #FFFFFF;
-	padding-left:10em;
+	left:10em;
 }
 	
 a:hover {
