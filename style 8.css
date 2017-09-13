@@ -284,11 +284,15 @@ body,html {
 	left: -300px
 }
 
-.back_button{
-	position: absolute;
-	bottom:: 5px;
-	padding_left:20px;
-}	
+.backbutton{
+	position:absolute;
+	font-size: 15px;
+	bottom:5px;
+	font-family: Arial;
+	background-color: #c3c1cc;
+	color: black;
+}
+
 .builders{
 	position:absolute;
 	color: white;
