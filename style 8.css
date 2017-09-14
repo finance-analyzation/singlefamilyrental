@@ -103,12 +103,12 @@ body,html {
 	background-color: #c3c1cc;
 	color: green;
 	top: 70%;
-	left: 10%;
+	left: 8%;
 }	
 .house1 {
 	position:absolute;
 	Top: 74%;
-	Left: 6%;
+	Left: 4%;
 	font-family: Arial;
 }		
 	
@@ -119,13 +119,13 @@ body,html {
 	background-color: #c3c1cc;
 	color: green;
 	top: 70%;
-	left: 30%;
+	left: 33%;
 }	
 	
 .house2 {
 	position:absolute;
 	Top: 74%;
-	Left: 26%;
+	Left: 29%;
 	font-family: Arial;
 }		
 	
@@ -136,13 +136,13 @@ body,html {
 	background-color: #c3c1cc;
 	color: green;
 	top: 70%;
-	left: 50%;
+	left: 59%;
 }	
 	
 .house3 {
 	position:absolute;
 	Top: 74%;
-	Left: 46%;
+	Left: 54%;
 	font-family: Arial;
 }		
 	
