@@ -18,7 +18,7 @@ body,html {
 	opacity: 0.3; /*transparent setting*/
 	background-color: black; 
 }
-
+/*
 .title_banner{
 	position:absolute;
 	font-size: 27px;
@@ -28,7 +28,7 @@ body,html {
 	height: 50px;
 	white-space: nowrap;
 }
-
+*/
 .all_middle{
 	font-family: Arial;
 }
@@ -58,9 +58,9 @@ body,html {
 	position: absolute;
 	font-size: 27px;
 	font-family: Arial;
-	left: 17em;
+	left: 28%;
 	top: -5px;
-	
+	margin-right: 14em;
 }
 
 .middle {
@@ -81,9 +81,9 @@ body,html {
 	position: absolute;
 	font-size: 27px;
 	font-family: Arial;
-	left: 38em;
+	left: 65%;
 	top: -5px;
-	
+	white-space: nowrap;
 }
 
 .right {
@@ -91,6 +91,7 @@ body,html {
 	left: 67%;
 	top: 100px;		
 	font-family: Arial;
+	white-space: nowrap;
 }
 
 /*------------Bottom Data-----------*/
