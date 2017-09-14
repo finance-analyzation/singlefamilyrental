@@ -291,7 +291,7 @@ body,html {
 	font-family: Arial;
 	background-color: #c3c1cc;
 	color: black;
-	left: 1px;	
+	left: 10px;	
 }
 
 .builders{
@@ -306,7 +306,6 @@ body,html {
 a {
 	text-decoration: none;
 	color: #FFFFFF;
-	left:10em;
 }
 	
 a:hover {
