@@ -162,7 +162,7 @@ body,html {
 	icon: ("question.jpg");
 	position:absolute;
 	left: 32%;
-	top: 174px;
+	top: 175px;
 }
 .help_pmi span{ display:none;}	
 .help_pmi:hover	span{
@@ -183,7 +183,7 @@ body,html {
 	icon: ("question.jpg");
 	position:absolute;
 	left: 32%;
-	top: 334px;
+	top: 335px;
 }
 .help_repair span{ display:none;}	
 .help_repair:hover	span{
@@ -196,7 +196,7 @@ body,html {
 	background: black;
 	font-size: 13px;
 	border-radius: 6px;
-	top: -5px;
+	top: -6px;
 	left: -180px
 }
 	
@@ -204,7 +204,7 @@ body,html {
 	icon: ("question.jpg");
 	position:absolute;
 	left: 32%;
-	top: 372px;
+	top: 373px;
 }
 .help_vacancy span{ display:none;}	
 .help_vacancy:hover	span{
@@ -217,7 +217,7 @@ body,html {
 	background: black;
 	font-size: 13px;
 	border-radius: 6px;
-	top: -5px;
+	top: -6px;
 	left: -85px
 }	
 
@@ -225,7 +225,7 @@ body,html {
 	icon: ("question.jpg");
 	position:absolute;
 	left: 32%;
-	top: 413px;
+	top: 414px;
 }
 .help_capex span{ display:none;}	
 .help_capex:hover	span{
@@ -238,7 +238,7 @@ body,html {
 	background: black;
 	font-size: 13px;
 	border-radius: 6px;
-	top: -5px;
+	top: -6px;
 	left: -207px
 }	
 	/*------Rigt Help Questions--------------*/
@@ -247,7 +247,7 @@ body,html {
 	icon: ("question.jpg");
 	position:absolute;
 	left: 66%;
-	top: 200px;
+	top: 201px;
 }
 .help_cash span{ display:none;}	
 .help_cash:hover	span{
@@ -260,7 +260,7 @@ body,html {
 	background: black;
 	font-size: 13px;
 	border-radius: 6px;
-	top: -5px;
+	top: -6px;
 	left: -165px
 }
 
@@ -268,7 +268,7 @@ body,html {
 	icon: ("question.jpg");
 	position:absolute;
 	left: 66%;
-	top: 240px;
+	top: 241px;
 }
 .help_roi span{ display:none;}	
 .help_roi:hover	span{
@@ -281,7 +281,7 @@ body,html {
 	background: black;
 	font-size: 13px;
 	border-radius: 6px;
-	top: -5px;
+	top: -6px;
 	left: -300px
 }
 
