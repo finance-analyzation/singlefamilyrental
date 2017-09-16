@@ -161,7 +161,7 @@ body,html {
 .help_pmi {
 	icon: ("question.jpg");
 	position:absolute;
-	left: 32%;
+	left: 33%;
 	top: 170px;
 }
 .help_pmi span{ display:none;}	
@@ -182,7 +182,7 @@ body,html {
 .help_repair {
 	icon: ("question.jpg");
 	position:absolute;
-	left: 32%;
+	left: 33%;
 	top: 330px;
 }
 .help_repair span{ display:none;}	
@@ -203,7 +203,7 @@ body,html {
 .help_vacancy {
 	icon: ("question.jpg");
 	position:absolute;
-	left: 32%;
+	left: 33%;
 	top: 368px;
 }
 .help_vacancy span{ display:none;}	
@@ -224,7 +224,7 @@ body,html {
 .help_capex {
 	icon: ("question.jpg");
 	position:absolute;
-	left: 32%;
+	left: 33%;
 	top: 409px;
 }
 .help_capex span{ display:none;}	
@@ -246,7 +246,7 @@ body,html {
 .help_cash {
 	icon: ("question.jpg");
 	position:absolute;
-	left: 66%;
+	left: 65%;
 	top: 196px;
 }
 .help_cash span{ display:none;}	
@@ -267,7 +267,7 @@ body,html {
 .help_roi {
 	icon: ("question.jpg");
 	position:absolute;
-	left: 66%;
+	left: 65%;
 	top: 236px;
 }
 .help_roi span{ display:none;}	
