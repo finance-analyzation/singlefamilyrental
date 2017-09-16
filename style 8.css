@@ -162,7 +162,7 @@ body,html {
 	icon: ("question.jpg");
 	position:absolute;
 	left: 32%;
-	top: 177px;
+	top: 172px;
 }
 .help_pmi span{ display:none;}	
 .help_pmi:hover	span{
