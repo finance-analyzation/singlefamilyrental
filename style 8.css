@@ -162,7 +162,7 @@ body,html {
 	icon: ("question.jpg");
 	position:absolute;
 	left: 32%;
-	top: 172px;
+	top: 170px;
 }
 .help_pmi span{ display:none;}	
 .help_pmi:hover	span{
@@ -183,7 +183,7 @@ body,html {
 	icon: ("question.jpg");
 	position:absolute;
 	left: 32%;
-	top: 337px;
+	top: 330px;
 }
 .help_repair span{ display:none;}	
 .help_repair:hover	span{
@@ -204,7 +204,7 @@ body,html {
 	icon: ("question.jpg");
 	position:absolute;
 	left: 32%;
-	top: 375px;
+	top: 368px;
 }
 .help_vacancy span{ display:none;}	
 .help_vacancy:hover	span{
@@ -225,7 +225,7 @@ body,html {
 	icon: ("question.jpg");
 	position:absolute;
 	left: 32%;
-	top: 416px;
+	top: 409px;
 }
 .help_capex span{ display:none;}	
 .help_capex:hover	span{
@@ -247,7 +247,7 @@ body,html {
 	icon: ("question.jpg");
 	position:absolute;
 	left: 66%;
-	top: 203px;
+	top: 196px;
 }
 .help_cash span{ display:none;}	
 .help_cash:hover	span{
@@ -268,7 +268,7 @@ body,html {
 	icon: ("question.jpg");
 	position:absolute;
 	left: 66%;
-	top: 243px;
+	top: 236px;
 }
 .help_roi span{ display:none;}	
 .help_roi:hover	span{
