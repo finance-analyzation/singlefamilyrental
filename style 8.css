@@ -246,7 +246,7 @@ body,html {
 .help_cash {
 	icon: ("question.jpg");
 	position:absolute;
-	left: 65%;
+	left: 66%;
 	top: 196px;
 }
 .help_cash span{ display:none;}	
@@ -267,7 +267,7 @@ body,html {
 .help_roi {
 	icon: ("question.jpg");
 	position:absolute;
-	left: 65%;
+	left: 66%;
 	top: 236px;
 }
 .help_roi span{ display:none;}	
