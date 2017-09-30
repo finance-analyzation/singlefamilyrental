@@ -108,7 +108,7 @@ body,html {
 .house1 {
 	position:absolute;
 	Top: 74%;
-	Left: 4%;
+	Left: 3em;
 	font-family: Arial;
 }		
 	
@@ -125,7 +125,7 @@ body,html {
 .house2 {
 	position:absolute;
 	Top: 74%;
-	Left: 29%;
+	Left: 28em;
 	font-family: Arial;
 }		
 	
@@ -142,7 +142,7 @@ body,html {
 .house3 {
 	position:absolute;
 	Top: 74%;
-	Left: 54%;
+	Left: 55em;
 	font-family: Arial;
 }		
 	
