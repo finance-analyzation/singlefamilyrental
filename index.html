@@ -73,7 +73,7 @@ function computeRealestate(){
 		var capex = (+rent * 0.10).toFixed(2);
 		var total_revenue = (+rent).toFixed(2);
 		var total_expenses = (+mortgage + +pmi + +taxes + +insurance + +repair + +vacancy + +capex).toFixed(2);
-		var total_cashflow = (+rent) - (+pmi + +insurance + +mortgage + +taxes).toFixed(2);
+		var total_cashflow = (+rent - (+pmi + +insurance + +mortgage + +taxes)).toFixed(2);
 		
 		var monthly_cash_flow = (+total_revenue - +total_expenses).toFixed(2);		
 		var yearly_cash_flow = (+monthly_cash_flow * 12).toFixed(2);
